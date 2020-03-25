@@ -2,9 +2,18 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var FormSchema = new Schema({
-	id: String,
 	name: String,
-	components: [{}],
+	smeRef: String,
+	components: String,
+	type: String,
+	page: {
+		type: Number,
+		value: 0
+	},
+	numPages: {
+		type: Number,
+		value: 0
+	},
 	created_at: {
 		type: Date,
 		default: new Date

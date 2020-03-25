@@ -7,10 +7,10 @@ module.exports =
         secret: 'devontherocks',
         // dbString: 'mongodb://heroku_482vnz04:tk0q583k85fkm9p9pl6g6ntlfk@ds133104.mlab.com:33104/heroku_482vnz04',
         //apiurl: 'https://pitbmed.herokuapp.com:'+process.env.PORT,
-        // dbString: 'mongodb://127.0.0.1:27017/trake',
+        dbString: 'mongodb://127.0.0.1:27017/trake',
         // dbString: 'mongodb://heroku_dtdfqg44:p7ise4hu7jcfgunu6lbt5vh09a@ds061676.mlab.com:61676/heroku_dtdfqg44',
-        dbString: 'mongodb://heroku_6275q504:tj4rs62a3fsks0t705576cj91k@ds163630.mlab.com:63630/heroku_6275q504',
-        apiurl: 'https://server125.herokuapp.com:'+process.env.PORT,
+        // dbString: 'mongodb://heroku_6275q504:tj4rs62a3fsks0t705576cj91k@ds163630.mlab.com:63630/heroku_6275q504',
+        // apiurl: 'https://server125.herokuapp.com:'+process.env.PORT,
         // apiUrl: 'ndrmfdev.herokuapp.com',
 
     },

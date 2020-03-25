@@ -52,8 +52,12 @@ exports.getSingleFormById = (req, res, next) => {
 exports.addForm = (req, res, next) => {
 
     const newUser = new FormsModel({
-        title: req.body.name,
-        components: req.body.components
+        name: req.body.title,
+        smeRef: req.body.smeRef,
+        components: req.body.components,
+        type: req.body.type,
+        page: req.body.page,
+        numPages: req.body.numPages,
     });
 
     newUser.save(function (err, result) {
@@ -63,10 +67,10 @@ exports.addForm = (req, res, next) => {
 }
 
 exports.allForms = (req, res, next) => {
-    FormsModel.find(function (err, users) {
+    FormsModel.find(function (err, forms) {
         if (err) {
             res.send(err);
         }
-        res.json([{ status: 1, message: 'Access Granted', users: users }]);
+        res.json([{ status: 1, message: 'Access Granted', forms: forms }]);
     });
 }
