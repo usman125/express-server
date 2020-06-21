@@ -3,7 +3,8 @@
   "version": "0.0.1-alpha",
   "description": "Trake is an automatic tagging and monitoring of work force tasks on maps",
   "main": "server.js",
-  "start": "server.js",
+  "start": "node server.js",
+  "heroku-postbuild": "ng build --prod",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,5 +27,9 @@
     "node-cron": "^1.2.1",
     "nodemailer": "^4.6.4",
     "nodemon": "^2.0.2"
+  },
+  "engines": {
+    "node": "13.11.0",
+    "npm": "6.13.7"
   }
 }
