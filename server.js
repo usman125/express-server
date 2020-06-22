@@ -14,23 +14,18 @@ const dbInit          = require(path.join(__dirname,'dbConnection'))(config);
 
 const cors = require('cors');
 
-// const devClientPath = 'http://localhost:8080';
-// const prodClientPath = 'http://34.216.198.135';
-
-// const devServerPath = 'http://localhost:8008';
-// const prodServerPath = 'http://34.216.198.135:8082';
 
 const corsOptions = {
   origin: '*',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  // optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
-app.use(cors(corsOptions));
 
 const port 			= config.port;                     // set our por
 const router 			= express.Router();
 // get an instance of the express Router
 
+app.use(cors(corsOptions));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true }));
 app.use(bodyParser.json({limit: '50mb'}));
 
