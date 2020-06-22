@@ -5,11 +5,11 @@ var UserSchema = new Schema({
 	name: String,
 	email: {
 		type: String,
-		required: [ true, 'Email is a Required field' ],
+		required: [true, 'Email is a Required field'],
 		unique: true,
 		validate: {
-			validator: function(v) {
-				if(v.length>0) 
+			validator: function (v) {
+				if (v.length > 0)
 					return /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i.test(v);
 				else
 					return true;
@@ -19,10 +19,16 @@ var UserSchema = new Schema({
 	},
 	password: {
 		type: String,
-		required: [ true, 'Password is a required field' ]
+		required: [true, 'Password is a required field']
 	},
 	contact: String,
-	username: String,	
+	username: String,
+	location: {
+		latitude: Number,
+		longitude: Number,
+	},
+	avatar: String,
+	dob: String,
 	created_at: {
 		type: Date,
 		default: new Date

@@ -20,10 +20,10 @@ const cors = require('cors');
 // const devServerPath = 'http://localhost:8008';
 // const prodServerPath = 'http://34.216.198.135:8082';
 
-var corsOptions = {
-  // origin: prodClientPath,
+const corsOptions = {
+  origin: '*',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
+};
 
 app.use(cors(corsOptions));
 
